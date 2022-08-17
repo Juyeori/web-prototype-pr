@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { FullPage, Slide } from 'react-full-page';
+import './App.scss'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FullPage controls>
+      <Slide>
+        <div className="App">
+          <div className="logo">LOGO</div> 
+          <button className="main">P:LOW</button>
+          <div className="navBar">
+            <a class="nav" href="#">Home</a>
+            <a class="nav" href="#">More</a>
+            <a class="nav" href="#">About Us</a>
+          </div>
+          <div className="mainIMG"></div>
+          <div className="login">
+            <div className="id">개인키 QR코드?</div>
+            
+          </div>
+        </div>
+      </Slide>
+      <Slide>
+        <div>2page</div>
+      </Slide>
+      <Slide>
+        <div>3page</div>
+      </Slide>
+      <Slide>
+        <div>4page</div>
+        <div className="ask">문의</div>
+        <footer>
+          <div class="foot_div">
+            footer
+          </div>
+        </footer>
+      </Slide>
+    </FullPage>
   );
 }
 
